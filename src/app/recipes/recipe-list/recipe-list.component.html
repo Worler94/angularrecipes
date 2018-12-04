@@ -1,9 +1,3 @@
 <div>Numero di ricette : {{recipes.length}}</div>
-<div *ngFor="let recipe of recipes" class="card" style="width: 100%;">
-  <img class="card-img-top" src="{{ricetta.imagePath}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{recipes[0].name}}</h5>
-    <p class="card-text">{{ricetta.description}}</p>
-    <a href="#" class="btn btn-primary">{{ingredients.nome}} - {{ingredients.peso}}</a>
-  </div>
-</div>
+<app-recipe-item *ngFor="let currentRicetta of recipes" [currentRicetta]="ricetta"></app-recipe-item>
+
